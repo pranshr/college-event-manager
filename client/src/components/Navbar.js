@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useAuth } from '../context/AuthContext';
 import { toast } from 'react-toastify';
 import './Navbar.css';
@@ -54,6 +54,13 @@ const Navbar = () => {
 
                     {user ? (
                         <>
+                            {user.role === 'admin' && (
+                                <Link to="/admin" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>
+                                    <motion.span whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                                        Dashboard
+                                    </motion.span>
+                                </Link>
+                            )}
                             <Link to="/profile" className="navbar-link" onClick={() => setMobileMenuOpen(false)}>
                                 <motion.span whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                                     Profile

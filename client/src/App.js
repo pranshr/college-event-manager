@@ -11,6 +11,8 @@ import VerifyOTP from './pages/VerifyOTP';
 import EventDetails from './pages/EventDetails';
 import Profile from './pages/Profile';
 import ManageEvent from './pages/ManageEvent';
+import AdminDashboard from './pages/AdminDashboard';
+import CreateEvent from './pages/CreateEvent';
 import RegistrationSuccess from './pages/RegistrationSuccess';
 import { AuthProvider, useAuth } from './context/AuthContext';
 
@@ -71,6 +73,22 @@ function App() {
                                     <ManageEvent />
                                 </AdminRoute>
                             } 
+                        />
+                        <Route 
+                            path="/events/new" 
+                            element={
+                                <AdminRoute>
+                                    <CreateEvent />
+                                </AdminRoute>
+                            }
+                        />
+                        <Route
+                            path="/admin"
+                            element={
+                                <AdminRoute>
+                                    <AdminDashboard />
+                                </AdminRoute>
+                            }
                         />
                         <Route 
                             path="/registration-success/:id" 

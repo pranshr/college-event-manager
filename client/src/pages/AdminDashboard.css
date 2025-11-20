@@ -1,0 +1,6 @@
+.admin-dashboard { padding: 40px 20px; }
+.dashboard-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; }
+.events-table table { width:100%; border-collapse:collapse; }
+.events-table th, .events-table td { padding:8px 12px; border:1px solid #e6e6e6; text-align:left; }
+.events-table th { background:#f7f7f7; }
+.btn { cursor:pointer; }
