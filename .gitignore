@@ -51,3 +51,6 @@ credentials*.json
 *.envrc
 *.tgz
 *.log.*
+
+# Ignore server-side helper scripts (local tools, one-off scripts)
+server/scripts/
